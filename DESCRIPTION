@@ -1,11 +1,9 @@
 Package: PaqueteAgrometeorologico
 Title: Paquete Para Uso de Datos Meteorologicos 
 Version: 0.0.0.9000
-Authors@R: 
-    person("Juan Ignacio", "Castillo", "juanicastillo2006@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-    person("Santino", "Almiron Nanni", "santinoalmirona10@gmail.com", role = c("aut", "ctb"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+Authors@R:  
+    c(person("Juan Ignacio",  "Castillo", email = "juanicastillo2006@gmail.com", role = c("aut", "cre")),
+    person("Santino",  "Almiron Nanni", email = "santinoalmirona10@gmail.com", role = "aut"))
 Description: Este paquete no esta destinado al uso publico, sino que, fue creado para una instancia evaluativa 
              de la materia Programacion II. 
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
