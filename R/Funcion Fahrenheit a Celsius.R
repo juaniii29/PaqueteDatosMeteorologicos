@@ -1,8 +1,10 @@
 #' De fahrenheit a celsius
 #'
-#' La funcion `convertir_fc()` pasa de grados fahrenheit a celsius
+#' La funcion `convertir_fc()` toma una temperatura en grados fahrenheit y la convierte a grados celsius
 #'
-#' @param temp_fahrenheit un vector numerico
+#' Estos son detalles extra de la funcion
+#'
+#' @param temp_fahrenheit Una temperatura en grados fahrenheit (un vector numerico)
 #'
 #' @return
 #' Un vector numérico en grados Celsius

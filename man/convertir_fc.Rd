@@ -7,13 +7,16 @@
 convertir_fc(temp_fahrenheit)
 }
 \arguments{
-\item{temp_fahrenheit}{un vector numerico}
+\item{temp_fahrenheit}{Una temperatura en grados fahrenheit (un vector numerico)}
 }
 \value{
 Un vector numérico en grados Celsius
 }
 \description{
-La funcion \code{convertir_fc()} pasa de grados fahrenheit a celsius
+La funcion \code{convertir_fc()} toma una temperatura en grados fahrenheit y la convierte a grados celsius
+}
+\details{
+Estos son detalles extra de la funcion
 }
 \examples{
 convertir_fc(c(0, 32, 100))
