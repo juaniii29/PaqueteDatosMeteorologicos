@@ -1,8 +1,10 @@
 #' De fahrenheit a celsius
 #'
-#' La funcion `convertir_fc()` pasa de grados fahrenheit a celsius
+#' La funcion `convertir_fc()` toma una temperatura en grados fahrenheit y la convierte a grados celsius
 #'
-#' @param temp_fahrenheit un vector numerico
+#' Estos son detalles extra de la funcion
+#'
+#' @param temp_fahrenheit Una temperatura en grados fahrenheit (un vector numerico)
 #'
 #' @return
 #' Un vector numérico en grados Celsius
@@ -11,7 +13,7 @@
 #' [convertir_cf()]
 #'
 #' @examples
-#' convertir_fc(c(0, 32, 100))
+#' convertir_fc(33)
 #'
 #'
 #' @export
@@ -21,3 +23,4 @@ convertir_fc <- function(temp_fahrenheit) {
   }
   (temp_fahrenheit - 32) * 5 / 9
 }
+

@@ -1,0 +1,35 @@
+---
+title: "Guia_de_funciones_meteorologicas"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Guia_de_funciones_meteorologicas}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(PaqueteAgrometeorologico)
+```
+
+Esta es una viñeta en la que se podra testear las distintas funciones del paquete
+
+```{r}
+convertir_cf(30)
+convertir_fc(33)
+
+#> [1] 86
+#> [2] 0.5555556
+```
+
+
+
+
+
+
