@@ -18,11 +18,7 @@
 #'
 #' @export
 clasificar_temperatura <- function(temp) {
-  if (temp < 15) {
-    return("Frío")
-  } else if (temp >= 15 & temp <= 25) {
-    return("Templado")
-  } else {
-    return("Caliente")
-  }
+  ifelse(temp < 15, "Frío",
+         ifelse(temp <= 25, "Templado", "Caliente"))
 }
+
