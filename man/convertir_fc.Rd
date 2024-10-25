@@ -19,7 +19,7 @@ La funcion \code{convertir_fc()} toma una temperatura en grados fahrenheit y la 
 Estos son detalles extra de la funcion
 }
 \examples{
-convertir_fc(c(0, 32, 100))
+convertir_fc(33)
 
 
 }
