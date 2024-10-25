@@ -23,9 +23,11 @@ Esta es una viñeta en la que se podra testear las distintas funciones del paque
 ```{r}
 convertir_cf(30)
 convertir_fc(33)
+clasificar_temperatura(21)
 
 #> [1] 86
 #> [2] 0.5555556
+#> [3] "Templado"
 ```
 
 
