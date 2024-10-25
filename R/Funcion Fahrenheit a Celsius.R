@@ -11,6 +11,7 @@
 #'
 #' @seealso
 #' [convertir_cf()]
+#' [clasificar_temperatura()]
 #'
 #' @examples
 #' convertir_fc(33)

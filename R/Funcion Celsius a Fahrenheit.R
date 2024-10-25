@@ -9,8 +9,9 @@
 #' @return
 #' Un vector numerico en grados fahrenheit
 #'
-#'@seealso
+#' @seealso
 #' [convertir_fc()]
+#' [clasificar_temperatura()]
 #'
 #' @examples
 #'

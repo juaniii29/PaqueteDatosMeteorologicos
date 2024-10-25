@@ -26,4 +26,5 @@ convertir_cf(10)
 }
 \seealso{
 \code{\link[=convertir_fc]{convertir_fc()}}
+\code{\link[=clasificar_temperatura]{clasificar_temperatura()}}
 }
