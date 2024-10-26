@@ -18,20 +18,26 @@ knitr::opts_chunk$set(
 library(PaqueteAgrometeorologico)
 ```
 
-Esta es una viñeta en la que se podra testear las distintas funciones del paquete
+Esta viñeta nos permite mostrar como usar la funcion 'convertir_cf()' 
 
 ```{r}
 convertir_cf(30)
-convertir_fc(33)
-clasificar_temperatura(21)
 
-#> [1] 86
-#> [2] 0.5555556
-#> [3] "Templado"
 ```
 
+Esta viñeta nos permite mostrar como usar la funcion 'convertir_fc()' 
 
+```{r}
+convertir_fc(33)
 
+```
+
+Esta viñeta nos permite mostrar como usar la funcion 'clasificar_temperatura()' 
+
+```{r}
+clasificar_temperatura(21)
+
+```
 
 
 
