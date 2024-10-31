@@ -55,7 +55,7 @@ get_data <- function(estacion, destfile) {
 
   url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0910.csv")
 
-  destfile <- file.path(getwd(), "data", "DATOS", paste0(estacion, ".csv"))
+  destfile <- file.path(getwd(), "data", "data_raw", paste0(estacion, ".csv"))
 
   tryCatch({
     download.file(url = url, destfile = destfile)
@@ -72,4 +72,6 @@ get_data <- function(estacion, destfile) {
   return(NH0910)
 }
 
+
+get_data('NH0910')
 

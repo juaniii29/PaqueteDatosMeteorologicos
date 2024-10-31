@@ -42,12 +42,9 @@
 #'   \item{unidad_frio}{Unidad de medida para las horas de frío, valores NA.}
 #' }
 #' @source Los datos fueron obtenidos de los materiales otorgados en la clase de Programacion II.
-<<<<<<< HEAD
 #' @export
-=======
 #'
 #'
->>>>>>> 4c3f922ced1301f13f0b25de80dffe7812b8e278
 #' @examples
 #' #Cargar el dataset
 #' data(NH0046)
@@ -60,7 +57,7 @@ get_data <- function(estacion, destfile) {
   # Construir la URL usando el nombre de la estación
   url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/", estacion, ".csv")
 
-  destfile <- file.path(getwd(), "data", "DATOS", paste0(estacion, ".csv"))
+  destfile <- file.path(getwd(), "data", "data_raw", paste0(estacion, ".csv"))
 
   tryCatch({
     download.file(url = url, destfile = destfile)
@@ -77,4 +74,4 @@ get_data <- function(estacion, destfile) {
   return(NH0046)
 }
 
-
+get_data('NH0046')
