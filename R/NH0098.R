@@ -55,6 +55,8 @@ get_data <- function(estacion, destfile) {
   # Construir la URL usando el nombre de la estación
   url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0098.csv")
 
+  destfile <- file.path(getwd(), "data", "DATOS", paste0(estacion, ".csv"))
+
   tryCatch({
     download.file(url = url, destfile = destfile)
   }, error = function(e) {
@@ -70,4 +72,4 @@ get_data <- function(estacion, destfile) {
   return(NH0098)
 }
 
-get_data(NH0098, '/Users/juani/Documents/PaqueteDatosMeteorologicos/data/DATOS/NH0098.csv')
+get_data('NH0098')
