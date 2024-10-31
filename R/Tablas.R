@@ -13,7 +13,7 @@
 #' - `maxima`: La temperatura maxima de la columna `temperatura_abrigo_150cm_maxima`.
 #'
 #' @examples
-#' tabla_resumen_temperatura(NH0910)
+#' tabla_resumen_temperatura('NH0910')
 #'
 #' @export
 tabla_resumen_temperatura <- function(nombre_archivo) {
