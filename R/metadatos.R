@@ -31,6 +31,8 @@ get_data <- function(estacion, destfile) {
   # Construir la URL usando el nombre de la estación
   url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/metadatos_completos.csv")
 
+  destfile <- file.path(getwd(), "data", "DATOS", paste0(estacion, ".csv"))
+
   tryCatch({
     download.file(url = url, destfile = destfile)
   }, error = function(e) {
@@ -46,4 +48,4 @@ get_data <- function(estacion, destfile) {
   return(metadatos)
 }
 
-get_data(metadatos, '/Users/juani/Documents/PaqueteDatosMeteorologicos/data/DATOS/metadatos.csv')
+get_data('metadatos')
