@@ -73,4 +73,4 @@ get_data <- function(estacion, destfile) {
   return(NH0046)
 }
 
-get_data('NH0046')
+

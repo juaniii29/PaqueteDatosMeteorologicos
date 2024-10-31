@@ -6,8 +6,7 @@
 #'
 #' @param temp_fahrenheit Una temperatura en grados fahrenheit (un vector numerico)
 #'
-#' @return
-#' Un vector numérico en grados Celsius
+#' @return Un vector numérico en grados Celsius
 #'
 #' @seealso
 #' [convertir_cf()]

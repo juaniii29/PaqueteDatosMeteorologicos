@@ -48,4 +48,4 @@ get_data <- function(estacion, destfile) {
   return(metadatos)
 }
 
-get_data('metadatos')
+
