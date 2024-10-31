@@ -50,3 +50,24 @@
 #' #Ver las primeras filas del dataset
 #' head(NH0046)
 "NH0046"
+
+get_data <- function(estacion, destfile) {
+  # Construir la URL usando el nombre de la estación
+  url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0046.csv")
+
+  tryCatch({
+    download.file(url = url, destfile = destfile)
+  }, error = function(e) {
+    cli::cli_abort("Error en la descarga del archivo desde la URL proporcionada.")
+  })
+
+  tryCatch({
+    NH0046 <<- readr::read_csv(destfile)
+  }, error = function(e) {
+    cli::cli_abort("No se pudo leer el archivo descargado. Verifique que el archivo sea un CSV válido.")
+  })
+
+  return(NH0046)
+}
+
+get_data(NH0046, '/Users/juani/Documents/PaqueteDatosMeteorologicos/data/DATOS/NH0046.csv')

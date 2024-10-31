@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # PaqueteAgrometeorologico
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 El objetivo del PaqueteAgrometeorologico es brindar herramientas al usuario en base a funciones, para que pueda trabajar de manera mas eficiente en el ambito meteorologico.
@@ -29,12 +30,15 @@ You can install the development version of PaqueteAgrometeorologico from [GitHub
 pak::pak("juaniii29/PaqueteDatosMeteorologicos")
 ```
 
+## Funciones
+
+*`convertir_cf()`*: Toma un valor numerico en grados celsius y lo convierte a grados fahrenheit *`convertir_fc()`*: Toma un valor numerico en grados fahrenheit y lo convierte a grados celsius *`clasificar_temperatura()`*: Toma un valor numerico en grados celsius y lo clasifica dependiendo de su magnitud
+
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Este es un ejemplo basico en el que se muestra una de las tantas funciones del paquete:
 
 ```{r example}
 library(PaqueteAgrometeorologico)
 convertir_fc(c(0, 32, 100))
 ```
-

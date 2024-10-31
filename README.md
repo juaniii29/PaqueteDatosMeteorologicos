@@ -20,9 +20,18 @@ You can install the development version of PaqueteAgrometeorologico from
 pak::pak("juaniii29/PaqueteDatosMeteorologicos")
 ```
 
-## Ejemplo
+## Funciones
 
-This is a basic example which shows you how to solve a common problem:
+*`convertir_cf()`*: Toma un valor numerico en grados celsius y lo
+convierte a grados fahrenheit *`convertir_fc()`*: Toma un valor numerico
+en grados fahrenheit y lo convierte a grados celsius
+*`clasificar_temperatura()`*: Toma un valor numerico en grados celsius y
+lo clasifica dependiendo de su magnitud
+
+## Example
+
+Este es un ejemplo basico en el que se muestra una de las tantas
+funciones del paquete:
 
 ``` r
 library(PaqueteAgrometeorologico)

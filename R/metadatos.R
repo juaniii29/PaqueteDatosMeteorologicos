@@ -26,3 +26,24 @@
 #' #Ver las primeras filas del dataset
 #' head(metadatos)
 "metadatos"
+
+get_data <- function(estacion, destfile) {
+  # Construir la URL usando el nombre de la estación
+  url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/metadatos_completos.csv")
+
+  tryCatch({
+    download.file(url = url, destfile = destfile)
+  }, error = function(e) {
+    cli::cli_abort("Error en la descarga del archivo desde la URL proporcionada.")
+  })
+
+  tryCatch({
+    metadatos <<- readr::read_csv(destfile)
+  }, error = function(e) {
+    cli::cli_abort("No se pudo leer el archivo descargado. Verifique que el archivo sea un CSV válido.")
+  })
+
+  return(metadatos)
+}
+
+get_data(metadatos, '/Users/juani/Documents/PaqueteDatosMeteorologicos/data/DATOS/metadatos.csv')
