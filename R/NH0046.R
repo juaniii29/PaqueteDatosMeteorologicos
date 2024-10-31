@@ -42,7 +42,7 @@
 #'   \item{unidad_frio}{Unidad de medida para las horas de frío, valores NA.}
 #' }
 #' @source Los datos fueron obtenidos de los materiales otorgados en la clase de Programacion II.
-#'
+#' @export
 #' @examples
 #' #Cargar el dataset
 #' data(NH0046)

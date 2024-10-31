@@ -18,7 +18,7 @@
 #' @export
 tabla_resumen_temperatura <- function(nombre_archivo) {
 
-  ruta <- paste0("data/", nombre_archivo, ".csv.rda")
+  ruta <- paste0("data/", nombre_archivo, ".rda")
 
   load(ruta)
 
@@ -39,5 +39,6 @@ tabla_resumen_temperatura <- function(nombre_archivo) {
 
   return(resumen)
 }
+
 
 
