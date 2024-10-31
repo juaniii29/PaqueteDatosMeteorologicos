@@ -20,4 +20,8 @@ download_file <- function(url, destfile, method = "auto") {
 }
 
 download_file("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/metadatos_completos.csv", "datos/metadatos.csv")
-
+download_file("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0472.csv", "datos/NH0472.csv")
+download_file("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0910.csv", "datos/NH0910.csv")
+download_file("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0046.csv", "datos/NH0046.csv")
+download_file("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0098.csv", "datos/NH0098.csv")
+download_file("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0437.csv", "datos/NH0437.csv")
