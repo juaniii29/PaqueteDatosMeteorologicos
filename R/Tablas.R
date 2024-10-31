@@ -27,11 +27,10 @@ tabla_resumen_temperatura <- function(nombre_archivo) {
 
   if ("temperatura_abrigo_150cm" %in% colnames(data)) {
     resumen <- data %>%
-<<<<<<< HEAD
+
     # Crear un resumen sin agrupación (asumiendo que es para una sola estación)
     resumen <- data |>
-=======
->>>>>>> 7f705075202bcb8ad68271acf1cbfcc3ff682408
+
       dplyr::summarise(
         promedio_temperatura = mean(temperatura_abrigo_150cm, na.rm = TRUE),
         desviacion_estandar = sd(temperatura_abrigo_150cm, na.rm = TRUE),
