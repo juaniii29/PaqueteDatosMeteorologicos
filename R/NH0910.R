@@ -49,8 +49,8 @@
 #'
 #' #Ver las primeras filas del dataset
 #' head(NH0910)
-"NH0910"
-
+#'
+#' @export
 get_data <- function(estacion, destfile) {
 
   url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0910.csv")
