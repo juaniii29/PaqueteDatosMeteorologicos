@@ -43,14 +43,15 @@
 #' }
 #' @source Los datos fueron obtenidos de los materiales otorgados en la clase de Programacion II.
 #'
+#'
 #' @examples
 #' #Cargar el dataset
 #' data(NH0046)
 #'
 #' #Ver las primeras filas del dataset
 #' head(NH0046)
-"NH0046"
-
+#'
+#' @export
 get_data <- function(estacion, destfile) {
   # Construir la URL usando el nombre de la estación
   url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/", estacion, ".csv")

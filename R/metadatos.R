@@ -25,8 +25,8 @@
 #'
 #' #Ver las primeras filas del dataset
 #' head(metadatos)
-"metadatos"
-
+#'
+#' @export
 get_data <- function(estacion, destfile) {
   # Construir la URL usando el nombre de la estación
   url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/metadatos_completos.csv")
