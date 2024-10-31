@@ -2,14 +2,19 @@
 #'
 #' La funcion `download_file()` toma la direccion de donde descargar el archivo y la ruta y nombre de archivo donde se guardará.
 #'
-#' @param url
-#' @param destfile
-#' @param method
+#' Estos son detalles extra de la funcion
+#'
+#' @param url Un string que representa la URL de donde se descargará el archivo.
+#' @param destfile Un string que representa la ruta y el nombre de archivo donde se guardará el archivo descargado.
+#' @param method El método de descarga utilizado por `download.file()`. Por defecto es "auto".
 #'
 #' @return
-#' @export
+#' Un mensaje indicando si el archivo fue descargado con éxito o si hubo un error.
 #'
 #' @examples
+#' download_file("https://ejemplo.com/data.csv", "datos/data.csv")
+#'
+#' @export
 download_file <- function(url, destfile, method = "auto") {
   tryCatch({
     download.file(url, destfile, method = method)
