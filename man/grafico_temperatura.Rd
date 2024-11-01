@@ -17,7 +17,7 @@ grafico_temperatura(dataset, colores = NULL, titulo = "Temperatura Abrigo")
 Un objeto \code{ggplot} que representa un gráfico de línea de la temperatura media mensual
 }
 \description{
-La funcion \code{grafico_temperatura} toma un dataset con informacion sobre estaciones meteorologicas y devuelve un grafico de la temperatura media mensual por estación.
+La funcion \code{grafico_temperatura} toma un dataset con informacion sobre estaciones meteorologicas y devuelve un grafico de la temperatura media mensual por estación
 }
 \details{
 Estos son detalles extra de la funcion
