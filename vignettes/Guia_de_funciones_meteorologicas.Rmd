@@ -40,7 +40,6 @@ clasificar_temperatura(21)
 ```
 
 
-
 Esta viñeta nos permite mostrar como usar la funcion 'grafico_temperatura()' 
 
 ```{r}
