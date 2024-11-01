@@ -23,4 +23,5 @@ LazyData: true
 Config/testthat/edition: 3
 Imports: 
     dplyr,
-    ggplot2
+    ggplot2,
+    readr
