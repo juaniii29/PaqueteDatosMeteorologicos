@@ -1,6 +1,6 @@
 #' metadatos
 #'
-#' Este es un dataset de ejemplo que contiene información sobre estaciones meteorologicas, incluyendo ubicación, tipo, y fechas de operación.
+#' Este es un dataset de ejemplo que contiene informacion sobre estaciones meteorologicas, incluyendo ubicacion, tipo, y fechas de operacion.
 #'
 #'
 #' @format Un data frame con 258 filas y 11 variables:
@@ -28,7 +28,6 @@
 #'
 #' @export
 get_data <- function(estacion, destfile) {
-  # Construir la URL usando el nombre de la estación
   url <- paste0("https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/metadatos_completos.csv")
 
   destfile <- file.path(getwd(), "data_raw", paste0(estacion, ".csv"))
@@ -42,7 +41,7 @@ get_data <- function(estacion, destfile) {
   tryCatch({
     metadatos <<- readr::read_csv(destfile)
   }, error = function(e) {
-    cli::cli_abort("No se pudo leer el archivo descargado. Verifique que el archivo sea un CSV válido.")
+    cli::cli_abort("No se pudo leer el archivo descargado. Verifique que el archivo sea un CSV valido.")
   })
 
   return(metadatos)

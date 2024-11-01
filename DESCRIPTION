@@ -14,8 +14,7 @@ URL: https://github.com/juaniii29/PaqueteDatosMeteorologicos, https://juaniii29.
 BugReports: https://github.com/juaniii29/PaqueteDatosMeteorologicos/issues
 Suggests: 
     knitr,
-    rmarkdown,
-    testthat (>= 3.0.0)
+    rmarkdown
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)
@@ -24,4 +23,5 @@ Config/testthat/edition: 3
 Imports: 
     dplyr,
     ggplot2,
-    readr
+    readr,
+    testthat

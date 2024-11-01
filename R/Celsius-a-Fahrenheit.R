@@ -4,7 +4,7 @@
 #'
 #' Estos son detalles extra de la funcion
 #'
-#' @param temp_centigrados Una temperatura en grados celsius (un vector numerico)
+#' @param temp_celsius Una temperatura en grados celsius (un vector numerico)
 #'
 #' @return
 #' Un vector numerico en grados fahrenheit
@@ -21,7 +21,7 @@
 #' @export
 convertir_cf <- function(temp_celsius) {
   if (!is.numeric(temp_celsius)) {
-    cli::cli_abort("El argumento temp_celsius debe ser numérico. La variable ingresada es un {class(temp_celsius)[1]}")
+    cli::cli_abort("El argumento temp_celsius debe ser numerico. La variable ingresada es un {class(temp_celsius)[1]}")
   }
   (temp_celsius * 9/5) + 32
 }

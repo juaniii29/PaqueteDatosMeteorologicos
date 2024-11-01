@@ -7,7 +7,7 @@
 #' @param temp Una temperatura en grados celsius (un vector numerico)
 #'
 #' @return
-#' Una string que clasifica la temperatura ingresada. Los posibles valores son: "Frío", "Templado" y "Caliente"
+#' Una string que clasifica la temperatura ingresada. Los posibles valores son: "Frio", "Templado" y "Caliente"
 #'
 #' @seealso
 #'[convertir_fc()]
@@ -18,7 +18,7 @@
 #'
 #' @export
 clasificar_temperatura <- function(temp) {
-  ifelse(temp < 15, "Frío",
+  ifelse(temp < 15, "Frio",
          ifelse(temp <= 25, "Templado", "Caliente"))
 }
 

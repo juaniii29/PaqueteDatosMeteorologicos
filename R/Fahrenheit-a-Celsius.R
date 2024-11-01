@@ -19,7 +19,7 @@
 #' @export
 convertir_fc <- function(temp_fahrenheit) {
   if (!is.numeric(temp_fahrenheit)) {
-    cli::cli_abort("El argumento temp_fahrenheit debe ser numérico. La variable ingresada es un {class(temp_fahrenheit)[1]}")
+    cli::cli_abort("El argumento temp_fahrenheit debe ser numerico. La variable ingresada es un {class(temp_fahrenheit)[1]}")
   }
   (temp_fahrenheit - 32) * 5 / 9
 }
