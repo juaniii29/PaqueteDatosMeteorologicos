@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
 
 # PaqueteAgrometeorologico
 <img src="man/figures/logo.png" alt="PaqueteAgrometeorologico" align="right" style="float: right; margin-left: 10px;" width="200"/>
+
 <!-- badges: start -->
 
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -52,3 +53,8 @@ Este es un ejemplo basico en el que se muestra una de las tantas funciones del p
 library(PaqueteAgrometeorologico)
 convertir_fc(c(0, 32, 100))
 ```
+
+### Autores
+
+[Juan Ignacio Castillo] (https://github.com/juaniii29) Estudiante de la licenciatura en Ciencia de Datos
+[Santino Almiron Nanni] (https://github.com/santialmironn) Estudiante de la licenciatura en Ciencia de Datos
