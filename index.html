@@ -13,6 +13,7 @@
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Paquete Para Uso de Datos Meteorologicos">
 <meta name="description" content="Este paquete no esta destinado al uso publico, sino que, fue creado para una instancia evaluativa de la materia Programacion II.">
 <meta property="og:description" content="Este paquete no esta destinado al uso publico, sino que, fue creado para una instancia evaluativa de la materia Programacion II.">
+<meta property="og:image" content="/logo.png">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -52,27 +53,62 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="paqueteagrometeorologico">PaqueteAgrometeorologico<a class="anchor" aria-label="anchor" href="#paqueteagrometeorologico"></a>
-</h1></div>
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="paqueteagrometeorologico">PaqueteAgrometeorologico<a class="anchor" aria-label="anchor" href="#paqueteagrometeorologico"></a>
+</h1>
+</div>
+<p><img src="reference/figures/logo.png" alt="PaqueteAgrometeorologico" align="right" style="float: right; margin-left: 10px;" width="150"></p>
 <!-- badges: start -->
+
 <!-- badges: end -->
 <p>El objetivo del PaqueteAgrometeorologico es brindar herramientas al usuario en base a funciones, para que pueda trabajar de manera mas eficiente en el ambito meteorologico.</p>
+<div class="section level3">
+<h3 id="autores">Autores<a class="anchor" aria-label="anchor" href="#autores"></a>
+</h3>
+<ul>
+<li>
+<a href="https://github.com/juaniii29" class="external-link">Juan Ignacio Castillo</a> Estudiante de la licenciatura en Ciencia de Datos</li>
+<li>
+<a href="https://github.com/santialmironn" class="external-link">Santino Almiron Nanni</a> Estudiante de la licenciatura en Ciencia de Datos</li>
+</ul>
+</div>
 <div class="section level2">
 <h2 id="instalacion">Instalacion<a class="anchor" aria-label="anchor" href="#instalacion"></a>
 </h2>
-<p>You can install the development version of PaqueteAgrometeorologico from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>Puedes instalar la versión de desarrollo de PaqueteAgrometeorológico desde <a href="https://github.com/" class="external-link">GitHub</a> con:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"juaniii29/PaqueteDatosMeteorologicos"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
+<h2 id="funciones">Funciones<a class="anchor" aria-label="anchor" href="#funciones"></a>
+</h2>
+<p><em><code><a href="reference/convertir_cf.html">convertir_cf()</a></code></em>: Toma un valor numerico en grados celsius y lo convierte a grados fahrenheit.</p>
+<p><em><code><a href="reference/convertir_fc.html">convertir_fc()</a></code></em>: Toma un valor numerico en grados fahrenheit y lo convierte a grados celsius.</p>
+<p><em><code><a href="reference/clasificar_temperatura.html">clasificar_temperatura()</a></code></em>: Toma un valor numerico en grados celsius y lo clasifica dependiendo de su magnitud.</p>
+<p><em><code><a href="reference/tabla_resumen_temperatura.html">tabla_resumen_temperatura()</a></code></em>: Toma un dataset con informacion sobre estaciones meteorologicas y devuelve un resumen. sobre este.</p>
+<p><em><code><a href="reference/grafico_temperatura.html">grafico_temperatura()</a></code></em>: Toma un dataset con informacion sobre estaciones meteorologicas y devuelve un grafico de la temperatura media mensual por estación.</p>
+</div>
+<div class="section level2">
 <h2 id="ejemplo">Ejemplo<a class="anchor" aria-label="anchor" href="#ejemplo"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<p>Este es un ejemplo basico en el que se muestra una de las tantas funciones del paquete:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/juaniii29/PaqueteDatosMeteorologicos" class="external-link">PaqueteAgrometeorologico</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/convertir_fc.html">convertir_fc</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">32</span>, <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] -17.77778   0.00000  37.77778</span></span></code></pre></div>
+<p><img src="reference/figures/grafico.png" width="100%"></p>
+</div>
+<div class="section level2">
+<h2 id="contribuciones">Contribuciones<a class="anchor" aria-label="anchor" href="#contribuciones"></a>
+</h2>
+<p>Si deseas contribuir al paquete, ya sea para añadir nuevas funciones, corregir errores o mejorar la documentación, sigue estos pasos para asegurar una colaboración fluida:</p>
+<ul>
+<li><p><strong>Crea una rama para tu contribución</strong> : Para mantener el historial de cambios ordenado, comienza creando una nueva rama donde trabajarás en tu contribución. Puedes hacer esto ejecutando git checkout -b nombre-de-tu-rama.</p></li>
+<li><p><strong>Haz un fork y clona el repositorio</strong>: Realiza un fork de este repositorio en tu cuenta de GitHub. Luego, clona el repositorio en tu máquina local para trabajar en los cambios de forma segura y aislada.</p></li>
+<li><p><strong>Realiza tus cambios y abre un pull request</strong>: Implementa las mejoras o nuevas funciones en tu copia del repositorio. Cuando termines, abre un pull request (PR) hacia la rama principal del proyecto, proporcionando una descripción clara y detallada de tu contribución. Asegúrate de documentar los cambios y, si es posible, añade pruebas que respalden tus modificaciones para facilitar la revisión.</p></li>
+</ul>
+<p>Agradecemos tu colaboración en paqueteprueba y te recordamos seguir el código de conducta para promover un ambiente de respeto y profesionalismo en la comunidad.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -91,6 +127,13 @@
 </ul>
 </div>
 
+<div class="community">
+<h2 data-toc-skip>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CONTRIBUTING.html">Contributing guide</a></li>
+<li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
+</ul>
+</div>
 
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
@@ -107,7 +150,12 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>
