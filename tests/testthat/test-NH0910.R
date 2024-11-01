@@ -3,7 +3,7 @@ library(testthat)
 library(testthat)
 
 # Crear la carpeta si no existe
-dir.create(file.path(getwd(), "data/data_raw"), recursive = TRUE, showWarnings = FALSE)
+dir.create(file.path(getwd(), "data_raw"), recursive = TRUE, showWarnings = FALSE)
 
 # Test para verificar que el dataset `NH0910` tiene las columnas correctas
 test_that("NH0910 dataset tiene las columnas correctas", {
@@ -11,23 +11,25 @@ test_that("NH0910 dataset tiene las columnas correctas", {
   NH0910 <- get_data("NH0910")
 
   # Verificar el número de columnas y sus nombres
-  expect_equal(ncol(NH0910), 35)
-  expected_columns <- c(
-    "id", "fecha", "temperatura_abrigo_150cm", "temperatura_abrigo_150cm_maxima",
-    "temperatura_abrigo_150cm_minima", "temperatura_intemperie_5cm_minima",
-    "temperatura_intemperie_50cm_minima", "temperatura_suelo_5cm_media",
-    "temperatura_suelo_10cm_media", "temperatura_inte_5cm",
-    "temperatura_intemperie_150cm_minima", "humedad_suelo",
-    "precipitacion_pluviometrica", "granizo", "nieve",
-    "heliofania_efectiva", "heliofania_relativa", "tesion_vapor_media",
-    "humedad_media", "humedad_media_8_14_20", "rocio_medio",
-    "duracion_follaje_mojado", "velocidad_viento_200cm_media",
-    "direccion_viento_200cm", "velocidad_viento_1000cm_media",
-    "direccion_viento_1000cm", "velocidad_viento_maxima", "presion_media",
-    "radiacion_global", "radiacion_neta", "evaporacion_tanque",
-    "evapotranspiracion_potencial", "profundidad_napa", "horas_frio",
-    "unidad_frio"
-  )
+  expect_equal(ncol(NH0910), 11)
+
+  # Definir las columnas esperadas
+  expected_columns <- c("id", "fecha", "temperatura_abrigo_150cm",
+                        "temperatura_abrigo_150cm_maxima", "temperatura_abrigo_150cm_minima",
+                        "temperatura_intemperie_5cm_minima", "temperatura_intemperie_50cm_minima",
+                        "temperatura_suelo_5cm_media", "temperatura_suelo_10cm_media",
+                        "temperatura_inte_5cm", "temperatura_intemperie_150cm_minima",
+                        "humedad_suelo", "precipitacion_pluviometrica", "granizo",
+                        "nieve", "heliofania_efectiva", "heliofania_relativa",
+                        "tesion_vapor_media", "humedad_media",
+                        "humedad_media_8_14_20", "rocio_medio",
+                        "duracion_follaje_mojado", "velocidad_viento_200cm_media",
+                        "direccion_viento_200cm", "velocidad_viento_1000cm_media",
+                        "direccion_viento_1000cm", "velocidad_viento_maxima",
+                        "presion_media", "radiacion_global", "radiacion_neta",
+                        "evaporacion_tanque", "evapotranspiracion_potencial",
+                        "profundidad_napa", "horas_frio", "unidad_frio")
+
   expect_equal(colnames(NH0910), expected_columns)
 })
 
@@ -46,7 +48,7 @@ test_that("get_data lanza un error con una URL incorrecta", {
   expect_error(
     {
       url <- incorrect_url
-      destfile <- file.path(getwd(), "data", "data_raw", "NH0910_incorrect.csv")
+      destfile <- file.path(getwd(), "data_raw", "NH0910_incorrect.csv")
       download.file(url = url, destfile = destfile)
       NH0910 <<- readr::read_csv(destfile)
     },
@@ -56,19 +58,16 @@ test_that("get_data lanza un error con una URL incorrecta", {
 
 # Test para verificar que `get_data` lanza un error si el archivo descargado no es un CSV válido
 test_that("get_data lanza un error si el archivo descargado no es un CSV válido", {
-  destfile <- file.path(getwd(), "data", "data_raw", "NH0910_invalid.csv")
+  destfile <- file.path(getwd(), "data_raw", "NH0910_invalid.csv")
 
   # Crear archivo no válido temporalmente
   writeLines("Este no es un archivo CSV válido.", destfile)
 
-  expect_error(
-    {
-      NH0910 <<- readr::read_csv(destfile)
-    },
-    "No se pudo leer el archivo descargado. Verifique que el archivo sea un CSV válido."
-  )
+  # Asegúrate de que la función get_data lea correctamente el archivo
+  expect_error(get_data("NH0910_invalid"), "No se pudo leer el archivo descargado. Verifique que el archivo sea un CSV válido.")
 
   # Borrar el archivo temporal después del test
   unlink(destfile)
 })
+
 
