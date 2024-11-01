@@ -4,6 +4,10 @@
 # PaqueteAgrometeorologico
 
 <!-- badges: start -->
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
 <!-- badges: end -->
 
 El objetivo del PaqueteAgrometeorologico es brindar herramientas al
@@ -12,8 +16,8 @@ eficiente en el ambito meteorologico.
 
 ## Instalacion
 
-You can install the development version of PaqueteAgrometeorologico from
-[GitHub](https://github.com/) with:
+Puedes instalar la versión de desarrollo de PaqueteAgrometeorológico
+desde [GitHub](https://github.com/) con:
 
 ``` r
 # install.packages("pak")
@@ -23,10 +27,20 @@ pak::pak("juaniii29/PaqueteDatosMeteorologicos")
 ## Funciones
 
 *`convertir_cf()`*: Toma un valor numerico en grados celsius y lo
-convierte a grados fahrenheit *`convertir_fc()`*: Toma un valor numerico
-en grados fahrenheit y lo convierte a grados celsius
+convierte a grados fahrenheit.
+
+*`convertir_fc()`*: Toma un valor numerico en grados fahrenheit y lo
+convierte a grados celsius.
+
 *`clasificar_temperatura()`*: Toma un valor numerico en grados celsius y
-lo clasifica dependiendo de su magnitud
+lo clasifica dependiendo de su magnitud.
+
+*`tabla_resumen_temperatura()`*: Toma un dataset con informacion sobre
+estaciones meteorologicas y devuelve un resumen. sobre este.
+
+*`grafico_temperatura()`*: Toma un dataset con informacion sobre
+estaciones meteorologicas y devuelve un grafico de la temperatura media
+mensual por estación.
 
 ## Example
 

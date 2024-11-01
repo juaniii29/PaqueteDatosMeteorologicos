@@ -39,5 +39,17 @@ clasificar_temperatura(21)
 
 ```
 
+Esta viñeta nos permite mostrar como usar la funcion 'tabla_resumen_temperatura()' 
 
+```{r}
+tabla_resumen_temperatura('NH0437')
+
+```
+
+Esta viñeta nos permite mostrar como usar la funcion 'grafico_temperatura()' 
+
+```{r}
+grafico_temperatura(NH0046)
+
+```
 

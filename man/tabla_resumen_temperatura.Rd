@@ -25,6 +25,6 @@ La funcion \code{tabla_resumen_temperatura} toma un dataset con informacion sobr
 Estos son detalles extra de la funcion
 }
 \examples{
-tabla_resumen_temperatura(NH0910)
+tabla_resumen_temperatura('NH0910')
 
 }
