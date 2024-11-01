@@ -7,7 +7,7 @@
 convertir_cf(temp_celsius)
 }
 \arguments{
-\item{temp_centigrados}{Una temperatura en grados celsius (un vector numerico)}
+\item{temp_celsius}{Una temperatura en grados celsius (un vector numerico)}
 }
 \value{
 Un vector numerico en grados fahrenheit

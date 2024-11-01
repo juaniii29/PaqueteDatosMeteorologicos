@@ -3,6 +3,6 @@ test_that('La conversion se realizo con exito', {
 })
 
 test_that('No funciona con caracteres', {
-  expect_error(convertir_fc('50'), 'El argumento debe ser numerico, la variable ingesada es un caracter')
+  expect_error(convertir_fc('50'), 'El argumento temp_fahrenheit debe ser numerico')
 })
 

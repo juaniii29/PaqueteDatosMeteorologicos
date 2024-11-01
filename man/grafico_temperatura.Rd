@@ -2,22 +2,22 @@
 % Please edit documentation in R/Grafico.R
 \name{grafico_temperatura}
 \alias{grafico_temperatura}
-\title{Gráfico de temperatura media mensual para estaciones meteorológicas}
+\title{Grafico de temperatura media mensual para estaciones meteorologicas}
 \usage{
 grafico_temperatura(dataset, colores = NULL, titulo = "Temperatura Abrigo")
 }
 \arguments{
-\item{dataset}{Un data frame que contiene la información de las estaciones meteorológicas. Debe tener al menos las columnas \code{fecha} (tipo Date o POSIXt), \code{temperatura_abrigo_150cm} y \code{id} (identificador de estación).}
+\item{dataset}{Un data frame que contiene la informacion de las estaciones meteorologicas. Debe tener al menos las columnas \code{fecha} (tipo Date o POSIXt), \code{temperatura_abrigo_150cm} y \code{id} (identificador de estación).}
 
-\item{colores}{Un vector opcional de colores a usar para las distintas estaciones en el gráfico. Si no se especifica o si no contiene suficientes colores, se generará automáticamente un conjunto de colores aleatorios.}
+\item{colores}{Un vector opcional de colores a usar para las distintas estaciones en el grafico. Si no se especifica o si no contiene suficientes colores, se generara automaticamente un conjunto de colores aleatorios.}
 
-\item{titulo}{Un string con el título del gráfico. El valor predeterminado es \code{"Temperatura Abrigo"}.}
+\item{titulo}{Un string con el titulo del grafico. El valor predeterminado es \code{"Temperatura Abrigo"}.}
 }
 \value{
-Un objeto \code{ggplot} que representa un gráfico de línea de la temperatura media mensual
+Un objeto \code{ggplot} que representa un grafico de linea de la temperatura media mensual
 }
 \description{
-La funcion \code{grafico_temperatura} toma un dataset con informacion sobre estaciones meteorologicas y devuelve un grafico de la temperatura media mensual por estación
+La funcion \code{grafico_temperatura} toma un dataset con informacion sobre estaciones meteorologicas y devuelve un grafico de la temperatura media mensual por estacion
 }
 \details{
 Estos son detalles extra de la funcion

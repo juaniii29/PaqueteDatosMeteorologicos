@@ -10,7 +10,7 @@ clasificar_temperatura(temp)
 \item{temp}{Una temperatura en grados celsius (un vector numerico)}
 }
 \value{
-Una string que clasifica la temperatura ingresada. Los posibles valores son: "Frío", "Templado" y "Caliente"
+Una string que clasifica la temperatura ingresada. Los posibles valores son: "Frio", "Templado" y "Caliente"
 }
 \description{
 La funcion \code{clasificar_temperatura()}toma una temperatura de grados celisius y la clasifica dependiendo de su magnitud

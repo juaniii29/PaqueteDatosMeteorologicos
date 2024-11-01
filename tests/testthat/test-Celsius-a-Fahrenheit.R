@@ -3,5 +3,5 @@ test_that('La conversion se realizo con exito', {
 })
 
 test_that('No funciona con caracteres', {
-  expect_error(convertir_cf('20'), 'El argumento debe ser numerico, la variable ingesada es un caracter')
+  expect_error(convertir_cf('20'), 'El argumento temp_celsius debe ser numerico')
 })
