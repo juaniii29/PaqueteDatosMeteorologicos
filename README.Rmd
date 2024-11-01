@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 ```
 
 # PaqueteAgrometeorologico
-<img src="man/figures/logo.png" alt="PaqueteAgrometeorologico" align="right" style="float: right; margin-left: 10px;" width="200"/>
+<img src="man/figures/logo.png" alt="PaqueteAgrometeorologico" align="right" style="float: right; margin-left: 10px;" width="150"/>
 
 <!-- badges: start -->
 
