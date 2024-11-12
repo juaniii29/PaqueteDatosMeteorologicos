@@ -4,7 +4,7 @@
 \alias{tabla_resumen_temperatura}
 \title{Tabla de resumen}
 \usage{
-tabla_resumen_temperatura(nombre_archivo)
+tabla_resumen_temperatura(nombre_dataset)
 }
 \arguments{
 \item{nombre_archivo}{Un string con el nombre del archivo (sin extensión) que contiene el dataset de datos meteorológicos. Este archivo debe estar ubicado en la carpeta "data" y tener la extensión ".csv.rda".}

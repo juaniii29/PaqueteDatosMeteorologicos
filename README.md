@@ -67,10 +67,18 @@ convertir_fc(c(0, 32, 100))
 ```
 
 ``` r
+tabla_resumen_temperatura('NH0910')
+#> # A tibble: 1 × 4
+#>   promedio_temperatura desviacion_estandar minima maxima
+#>                  <dbl>               <dbl>  <dbl>  <dbl>
+#> 1                 17.7                6.12   -8.5     43
+```
+
+``` r
 grafico_temperatura(NH0046)
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 ### Autores
 

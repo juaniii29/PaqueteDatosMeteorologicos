@@ -56,6 +56,10 @@ convertir_fc(c(0, 32, 100))
 ```
 
 ```{r}
+tabla_resumen_temperatura('NH0910')
+```
+
+```{r}
 grafico_temperatura(NH0046)
 ```
 

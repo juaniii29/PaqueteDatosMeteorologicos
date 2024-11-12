@@ -16,14 +16,12 @@
 #' tabla_resumen_temperatura('NH0910')
 #'
 #' @export
-tabla_resumen_temperatura <- function(nombre_archivo) {
+tabla_resumen_temperatura <- function(nombre_dataset) {
+  if (!exists(nombre_dataset, envir = asNamespace("PaqueteDatosMeteorologicos"))) {
+    stop("El dataset especificado no existe en el paquete.")
+  }
 
-  ruta <- paste0("data_raw/", nombre_archivo, ".csv")
-
-  load(ruta)
-
-  nombre_objeto <- ls()[ls() != "nombre_archivo" & ls() != "ruta"]
-  data <- get(nombre_objeto)
+  data <- get(nombre_dataset, envir = asNamespace("PaqueteDatosMeteorologicos"))
 
   if ("temperatura_abrigo_150cm" %in% colnames(data)) {
     resumen <- data |>
@@ -34,7 +32,7 @@ tabla_resumen_temperatura <- function(nombre_archivo) {
         maxima = max(temperatura_abrigo_150cm_maxima, na.rm = TRUE)
       )
   } else {
-    stop("La columna 'temperatura_abrigo_150cm' no esta presente en los datos.")
+    stop("La columna 'temperatura_abrigo_150cm' no está presente en los datos.")
   }
 
   return(resumen)
