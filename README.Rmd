@@ -55,6 +55,10 @@ library(PaqueteAgrometeorologico)
 convertir_fc(c(0, 32, 100))
 ```
 
+```{r}
+grafico_temperatura(NH0046)
+```
+
 ### Autores
 
 [Juan Ignacio Castillo] (https://github.com/juaniii29) Estudiante de la licenciatura en Ciencia de Datos
