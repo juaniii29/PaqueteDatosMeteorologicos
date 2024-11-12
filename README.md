@@ -46,22 +46,16 @@ estaciones meteorologicas y devuelve un resumen. sobre este.
 estaciones meteorologicas y devuelve un grafico de la temperatura media
 mensual por estación.
 
-## Example
+## Ejemplos
 
-Este es un ejemplo basico en el que se muestra una de las tantas
-funciones del paquete:
+Estos son unos ejemplos basicos en los que se muestran las funciones del
+paquete:
 
 ``` r
-devtools::load_all(".")
-#> ℹ Loading PaqueteDatosMeteorologicos
-#> Rows: 258 Columns: 11
-#> ── Column specification ────────────────────────────────────────────────────────
-#> Delimiter: ","
-#> chr (8): id, nombre, tipo, localidad, provincia, ubicacion, desde, hasta
-#> dbl (3): lat, lon, altura
-#> 
-#> ℹ Use `spec()` to retrieve the full column specification for this data.
-#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+library(PaqueteDatosMeteorologicos)
+```
+
+``` r
 convertir_fc(c(0, 32, 100))
 #> [1] -17.77778   0.00000  37.77778
 ```
@@ -78,11 +72,11 @@ tabla_resumen_temperatura('NH0910')
 grafico_temperatura(NH0046)
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ### Autores
 
-\[Juan Ignacio Castillo\] (<https://github.com/juaniii29>) Estudiante de
-la licenciatura en Ciencia de Datos \[Santino Almiron Nanni\]
-(<https://github.com/santialmironn>) Estudiante de la licenciatura en
-Ciencia de Datos
+- [Juan Ignacio Castillo](https://github.com/juaniii29) Estudiante de la
+  licenciatura en Ciencia de Datos
+- [Santino Almiron Nanni](https://github.com/santialmironn) Estudiante
+  de la licenciatura en Ciencia de Datos

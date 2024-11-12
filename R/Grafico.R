@@ -37,10 +37,10 @@
     colores <- sample(colors(), num_estaciones)
   }
 
-  grafico <- dataset %>%
-    dplyr::mutate(mes = lubridate::month(fecha)) %>%
-    dplyr::group_by(id, mes) %>%
-    dplyr::summarise(temperatura_media = mean(temperatura_abrigo_150cm, na.rm = TRUE), .groups = "drop") %>%
+  grafico <- dataset |>
+    dplyr::mutate(mes = lubridate::month(fecha)) |>
+    dplyr::group_by(id, mes) |>
+    dplyr::summarise(temperatura_media = mean(temperatura_abrigo_150cm, na.rm = TRUE), .groups = "drop") |>
     ggplot2::ggplot(ggplot2::aes(mes, temperatura_media)) +
     ggplot2::geom_line(ggplot2::aes(color = id), linewidth = 1.4) +
     ggplot2::scale_color_manual(values = colores) +

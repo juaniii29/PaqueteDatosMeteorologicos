@@ -46,12 +46,15 @@ pak::pak("juaniii29/PaqueteDatosMeteorologicos")
 
 *`grafico_temperatura()`*: Toma un dataset con informacion sobre estaciones meteorologicas y devuelve un grafico de la temperatura media mensual por estación.
 
-## Example
+## Ejemplos
 
-Este es un ejemplo basico en el que se muestra una de las tantas funciones del paquete:
+Estos son unos ejemplos basicos en los que se muestran las funciones del paquete:
+
+```{r}
+library(PaqueteDatosMeteorologicos)
+```
 
 ```{r example}
-devtools::load_all(".")
 convertir_fc(c(0, 32, 100))
 ```
 
@@ -65,5 +68,5 @@ grafico_temperatura(NH0046)
 
 ### Autores
 
-[Juan Ignacio Castillo] (https://github.com/juaniii29) Estudiante de la licenciatura en Ciencia de Datos
-[Santino Almiron Nanni] (https://github.com/santialmironn) Estudiante de la licenciatura en Ciencia de Datos
+- [Juan Ignacio Castillo](https://github.com/juaniii29) Estudiante de la licenciatura en Ciencia de Datos
+- [Santino Almiron Nanni](https://github.com/santialmironn) Estudiante de la licenciatura en Ciencia de Datos
