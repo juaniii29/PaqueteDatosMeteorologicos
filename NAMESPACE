@@ -3,5 +3,6 @@
 export(clasificar_temperatura)
 export(convertir_cf)
 export(convertir_fc)
+export(descargar_datos)
 export(grafico_temperatura)
 export(tabla_resumen_temperatura)
