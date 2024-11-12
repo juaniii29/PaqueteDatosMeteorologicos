@@ -1,9 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# PaqueteAgrometeorologico
+# PaqueteDatosMeteorologicos
 
-<img src="man/figures/logo.png" alt="PaqueteAgrometeorologico" align="right" style="float: right; margin-left: 10px;" width="150"/>
+<img src="man/figures/logo.png" alt="PaqueteDatosMeteorologicos" align="right" style="float: right; margin-left: 10px;" width="150"/>
 
 <!-- badges: start -->
 
