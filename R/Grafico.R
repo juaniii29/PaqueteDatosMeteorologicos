@@ -11,14 +11,11 @@
 #' @return Un objeto `ggplot` que representa un grafico de linea de la temperatura media mensual
 #'
 #' @examples
-#'grafico_temperatura(NH0046)
+#' grafico_temperatura(NH0046)
 #'
 #' @export
-  grafico_temperatura <- function(dataset, colores = NULL, titulo = "Temperatura Abrigo") {
-  if (!requireNamespace("dplyr", quietly = TRUE)) {
-    install.packages("dplyr")
-  }
-  library(dplyr)
+  grafico_temperatura <- function(dataset, colores = NULL, titulo = "Temperatura Abrigo")
+    {
 
   if (!is.data.frame(dataset)) {
     cli::cli_abort("El argumento 'dataset' debe ser un data frame.")
