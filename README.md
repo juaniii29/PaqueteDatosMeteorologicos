@@ -9,23 +9,18 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-
+[![R-CMD-check](https://github.com/juaniii29/PaqueteDatosMeteorologicos/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/juaniii29/PaqueteDatosMeteorologicos/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/juaniii29/PaqueteDatosMeteorologicos/graph/badge.svg)](https://app.codecov.io/gh/juaniii29/PaqueteDatosMeteorologicos)
 <!-- badges: end -->
 
-El objetivo del PaqueteAgrometeorologico es brindar herramientas al
+El objetivo del PaqueteDatosMeteorologicos es brindar herramientas al
 usuario en base a funciones, para que pueda trabajar de manera mas
 eficiente en el ambito meteorologico.
 
-### Autores
-
-- [Juan Ignacio Castillo](https://github.com/juaniii29) Estudiante de la
-  licenciatura en Ciencia de Datos
-- [Santino Almiron Nanni](https://github.com/santialmironn) Estudiante
-  de la licenciatura en Ciencia de Datos
-
 ## Instalacion
 
-Puedes instalar la versión de desarrollo de PaqueteAgrometeorológico
+Puedes instalar la versión de desarrollo de PaqueteDatosMeteorologicos
 desde [GitHub](https://github.com/) con:
 
 ``` r
@@ -51,41 +46,35 @@ estaciones meteorologicas y devuelve un resumen. sobre este.
 estaciones meteorologicas y devuelve un grafico de la temperatura media
 mensual por estación.
 
-## Ejemplo
+## Example
 
 Este es un ejemplo basico en el que se muestra una de las tantas
 funciones del paquete:
 
 ``` r
-library(PaqueteAgrometeorologico)
+devtools::load_all(".")
+#> ℹ Loading PaqueteDatosMeteorologicos
+#> Rows: 258 Columns: 11
+#> ── Column specification ────────────────────────────────────────────────────────
+#> Delimiter: ","
+#> chr (8): id, nombre, tipo, localidad, provincia, ubicacion, desde, hasta
+#> dbl (3): lat, lon, altura
+#> 
+#> ℹ Use `spec()` to retrieve the full column specification for this data.
+#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 convertir_fc(c(0, 32, 100))
 #> [1] -17.77778   0.00000  37.77778
 ```
 
+``` r
+grafico_temperatura(NH0046)
+```
 
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-## Contribuciones
+### Autores
 
-Si deseas contribuir al paquete, ya sea para añadir nuevas funciones,
-corregir errores o mejorar la documentación, sigue estos pasos para
-asegurar una colaboración fluida:
-
-- **Crea una rama para tu contribución** : Para mantener el historial de
-  cambios ordenado, comienza creando una nueva rama donde trabajarás en
-  tu contribución. Puedes hacer esto ejecutando git checkout -b
-  nombre-de-tu-rama.
-
-- **Haz un fork y clona el repositorio**: Realiza un fork de este
-  repositorio en tu cuenta de GitHub. Luego, clona el repositorio en tu
-  máquina local para trabajar en los cambios de forma segura y aislada.
-
-- **Realiza tus cambios y abre un pull request**: Implementa las mejoras
-  o nuevas funciones en tu copia del repositorio. Cuando termines, abre
-  un pull request (PR) hacia la rama principal del proyecto,
-  proporcionando una descripción clara y detallada de tu contribución.
-  Asegúrate de documentar los cambios y, si es posible, añade pruebas
-  que respalden tus modificaciones para facilitar la revisión.
-
-Agradecemos tu colaboración en paqueteprueba y te recordamos seguir el
-código de conducta para promover un ambiente de respeto y
-profesionalismo en la comunidad.
+\[Juan Ignacio Castillo\] (<https://github.com/juaniii29>) Estudiante de
+la licenciatura en Ciencia de Datos \[Santino Almiron Nanni\]
+(<https://github.com/santialmironn>) Estudiante de la licenciatura en
+Ciencia de Datos

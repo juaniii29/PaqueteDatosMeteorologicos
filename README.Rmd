@@ -23,11 +23,11 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/juaniii29/PaqueteDatosMeteorologicos/graph/badge.svg)](https://app.codecov.io/gh/juaniii29/PaqueteDatosMeteorologicos)
 <!-- badges: end -->
 
-El objetivo del PaqueteAgrometeorologico es brindar herramientas al usuario en base a funciones, para que pueda trabajar de manera mas eficiente en el ambito meteorologico.
+El objetivo del PaqueteDatosMeteorologicos es brindar herramientas al usuario en base a funciones, para que pueda trabajar de manera mas eficiente en el ambito meteorologico.
 
 ## Instalacion
 
-Puedes instalar la versión de desarrollo de PaqueteAgrometeorológico desde [GitHub](https://github.com/) con:
+Puedes instalar la versión de desarrollo de PaqueteDatosMeteorologicos desde [GitHub](https://github.com/) con:
 
 ``` r
 # install.packages("pak")
@@ -51,7 +51,7 @@ pak::pak("juaniii29/PaqueteDatosMeteorologicos")
 Este es un ejemplo basico en el que se muestra una de las tantas funciones del paquete:
 
 ```{r example}
-library(PaqueteAgrometeorologico)
+devtools::load_all(".")
 convertir_fc(c(0, 32, 100))
 ```
 
