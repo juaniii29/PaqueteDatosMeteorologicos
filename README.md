@@ -62,7 +62,10 @@ convertir_fc(c(0, 32, 100))
 #> [1] -17.77778   0.00000  37.77778
 ```
 
-<img src="man/figures/grafico.png" width="100%" />
+```{r}
+grafico_temperatura(NH0046)
+```
+
 
 ## Contribuciones
 
