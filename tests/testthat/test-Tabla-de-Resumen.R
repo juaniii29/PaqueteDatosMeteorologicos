@@ -25,6 +25,25 @@ test_that("La salida tiene exactamente una fila", {
   expect_equal(nrow(resultado), 1)
 })
 
+test_that("Manejo de valores NA en 'temperatura_abrigo_150cm'", {
+  # Supón que el dataset "NH0910" tiene algunos valores NA en "temperatura_abrigo_150cm"
+  resultado <- tabla_resumen_temperatura("NH0910")
+
+  # Verifica que el cálculo del promedio ignore los NA
+  expect_true(!is.na(resultado$promedio_temperatura))
+})
+
+test_that("La salida tiene exactamente una fila", {
+  # Ejecuta la función con un dataset válido, como "NH0910"
+  resultado <- tabla_resumen_temperatura("NH0910")
+
+  # Verifica que la salida sea un data.frame
+  expect_s3_class(resultado, "data.frame")
+
+  # Verifica que el resultado tenga exactamente una fila
+  expect_equal(nrow(resultado), 1)
+})
+
 
 test_that("Error si faltan columnas requeridas en los datos", {
   NH0910_incompleto <- data.frame(

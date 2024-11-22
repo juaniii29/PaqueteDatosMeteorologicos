@@ -54,10 +54,13 @@ paquete:
 ``` r
 library(PaqueteDatosMeteorologicos)
 ```
+<<<<<<< HEAD
 
 ``` r
 library(PaqueteDatosMeteorologicos)
 ```
+=======
+>>>>>>> 5bc3f3af87f0492bec1d35e86b925f61600714a4
 
 ``` r
 convertir_fc(c(0, 32, 100))
