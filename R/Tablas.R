@@ -16,27 +16,29 @@
 #' tabla_resumen_temperatura('NH0910')
 #'
 #' @export
-tabla_resumen_temperatura <- function(nombre_dataset) {
-  if (!exists(nombre_dataset, envir = asNamespace("PaqueteDatosMeteorologicos"))) {
-    stop("El dataset especificado no existe en el paquete.")
+tabla_resumen_temperatura <- function(data) {
+  # Verificar que todas las columnas necesarias estén presentes
+  required_columns <- c("temperatura_abrigo_150cm", "temperatura_abrigo_150cm_minima", "temperatura_abrigo_150cm_maxima")
+  missing_columns <- setdiff(required_columns, colnames(data))
+
+  if (length(missing_columns) > 0) {
+    stop(paste("Faltan las siguientes columnas en los datos:", paste(missing_columns, collapse = ", ")))
   }
 
-  data <- get(nombre_dataset, envir = asNamespace("PaqueteDatosMeteorologicos"))
-
-  if ("temperatura_abrigo_150cm" %in% colnames(data)) {
-    resumen <- data |>
-      dplyr::summarise(
-        promedio_temperatura = mean(temperatura_abrigo_150cm, na.rm = TRUE),
-        desviacion_estandar = sd(temperatura_abrigo_150cm, na.rm = TRUE),
-        minima = min(temperatura_abrigo_150cm_minima, na.rm = TRUE),
-        maxima = max(temperatura_abrigo_150cm_maxima, na.rm = TRUE)
-      )
-  } else {
-    stop("La columna 'temperatura_abrigo_150cm' no está presente en los datos.")
-  }
+  # Calcular el resumen de temperatura
+  resumen <- data |>
+    dplyr::summarise(
+      promedio_temperatura = mean(temperatura_abrigo_150cm, na.rm = TRUE),
+      desviacion_estandar = sd(temperatura_abrigo_150cm, na.rm = TRUE),
+      minima = min(temperatura_abrigo_150cm_minima, na.rm = TRUE),
+      maxima = max(temperatura_abrigo_150cm_maxima, na.rm = TRUE)
+    )
 
   return(resumen)
 }
+
+
+
 
 
 

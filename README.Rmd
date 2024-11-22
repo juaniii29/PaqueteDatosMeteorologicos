@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 ```
 
 # PaqueteDatosMeteorologicos
-<img src="man/figures/logo.png" alt="PaqueteDatosMeteorologicos" align="right" style="float: right; margin-left: 10px;" width="150"/>
+<img src="man/figures/logo.png" alt="PaqueteAgrometeorologico" align="right" style="float: right; margin-left: 10px;" width="150"/>
 
 <!-- badges: start -->
 
@@ -50,8 +50,12 @@ pak::pak("juaniii29/PaqueteDatosMeteorologicos")
 
 Este es un ejemplo basico en el que se muestra una de las tantas funciones del paquete:
 
+```{r}
+library(PaqueteDatosMeteorologicos)
+```
+
+
 ```{r example}
-devtools::load_all(".")
 convertir_fc(c(0, 32, 100))
 ```
 
@@ -65,5 +69,5 @@ grafico_temperatura(NH0046)
 
 ### Autores
 
-[Juan Ignacio Castillo] (https://github.com/juaniii29) Estudiante de la licenciatura en Ciencia de Datos
-[Santino Almiron Nanni] (https://github.com/santialmironn) Estudiante de la licenciatura en Ciencia de Datos
+- [Juan Ignacio Castillo](https://github.com/juaniii29) Estudiante de la licenciatura en Ciencia de Datos
+- [Santino Almiron Nanni](https://github.com/santialmironn) Estudiante de la licenciatura en Ciencia de Datos

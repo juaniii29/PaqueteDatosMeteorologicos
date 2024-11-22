@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(PaqueteAgrometeorologico)
+library(PaqueteDatosMeteorologicos)
 
-test_check("PaqueteAgrometeorologico")
+test_check("PaqueteDatosMeteorologicos")
