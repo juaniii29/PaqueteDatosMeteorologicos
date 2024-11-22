@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(PaqueteAgrometeorologico)
+library(PaqueteDatosMeteorologicos)
 ```
 
 Esta viñeta nos permite mostrar como usar la funcion 'convertir_cf()' 
