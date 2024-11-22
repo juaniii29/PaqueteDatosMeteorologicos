@@ -46,10 +46,14 @@ estaciones meteorologicas y devuelve un resumen. sobre este.
 estaciones meteorologicas y devuelve un grafico de la temperatura media
 mensual por estación.
 
-## Ejemplo
+## Ejemplos
 
-Estos es un ejemplo basico en el que se muestra una de las tantas
-funciones del paquete:
+Estos son unos ejemplos basicos en los que se muestran las funciones del
+paquete:
+
+``` r
+library(PaqueteDatosMeteorologicos)
+```
 
 ``` r
 library(PaqueteDatosMeteorologicos)
