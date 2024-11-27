@@ -1,5 +1,5 @@
 test_that("clasificar_temperatura lanza error con caracteres", {
-  expect_error(clasificar_temperatura("11"), "El argumento debe ser numérico.")
+  expect_error(clasificar_temperatura("11"), "El argumento debe ser numerico.")
 })
 
 test_that("clasificar_temperatura funciona correctamente", {
@@ -20,7 +20,7 @@ test_that("clasificar_temperatura clasifica correctamente temperaturas negativas
 })
 
 test_that("clasificar_temperatura lanza error con NULL o NA", {
-  expect_error(clasificar_temperatura(NA), "El argumento debe ser numérico.")
+  expect_error(clasificar_temperatura(NA), "El argumento debe ser numerico.")
 })
 
 test_that("clasificar_temperatura clasifica correctamente un vector de temperaturas", {

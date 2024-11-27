@@ -7,7 +7,7 @@
 grafico_temperatura(dataset, colores = NULL, titulo = "Temperatura Abrigo")
 }
 \arguments{
-\item{dataset}{Un data frame que contiene la informacion de las estaciones meteorologicas. Debe tener al menos las columnas \code{fecha} (tipo Date o POSIXt), \code{temperatura_abrigo_150cm} y \code{id} (identificador de estación).}
+\item{dataset}{Un data frame que contiene la informacion de las estaciones meteorologicas. Debe tener al menos las columnas \code{fecha} (tipo Date o POSIXt), \code{temperatura_abrigo_150cm} y \code{id} (identificador de estacion).}
 
 \item{colores}{Un vector opcional de colores a usar para las distintas estaciones en el grafico. Si no se especifica o si no contiene suficientes colores, se generara automaticamente un conjunto de colores aleatorios.}
 

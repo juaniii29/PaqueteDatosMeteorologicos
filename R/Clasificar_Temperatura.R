@@ -19,7 +19,7 @@
 #' @export
 clasificar_temperatura <- function(temp) {
   if (!is.numeric(temp)) {
-    stop("El argumento debe ser numérico.")
+    stop("El argumento debe ser numerico.")
   }
   ifelse(temp < 15, "Frio",
          ifelse(temp <= 25, "Templado", "Caliente"))

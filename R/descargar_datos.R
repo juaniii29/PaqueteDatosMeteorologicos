@@ -20,14 +20,14 @@ descargar_datos <- function(id_estacion) {
 
   if (file.exists(ruta)) {
     datos_estacion <- utils::read.csv(ruta)
-    cli::cli_inform("Lectura del archivo de estación '{id_estacion}' desde el directorio temporal.")
+    cli::cli_inform("Lectura del archivo de estacion '{id_estacion}' desde el directorio temporal.")
   } else {
     tryCatch({
       utils::download.file(estacion_url, ruta, mode = "wb")
       datos_estacion <- utils::read.csv(ruta)
-      cli::cli_inform("Descargando y leyendo el archivo de estación '{id_estacion}' en el directorio temporal.")
+      cli::cli_inform("Descargando y leyendo el archivo de estacion '{id_estacion}' en el directorio temporal.")
     }, error = function(e) {
-      stop(paste("Error al descargar o leer los datos de la estación:", e$message))
+      stop(paste("Error al descargar o leer los datos de la estacion:", e$message))
     })
   }
 

@@ -4,7 +4,7 @@
 #'
 #' Estos son detalles extra de la funcion
 #'
-#' @param dataset Un data frame que contiene la informacion de las estaciones meteorologicas. Debe tener al menos las columnas `fecha` (tipo Date o POSIXt), `temperatura_abrigo_150cm` y `id` (identificador de estación).
+#' @param dataset Un data frame que contiene la informacion de las estaciones meteorologicas. Debe tener al menos las columnas `fecha` (tipo Date o POSIXt), `temperatura_abrigo_150cm` y `id` (identificador de estacion).
 #' @param colores Un vector opcional de colores a usar para las distintas estaciones en el grafico. Si no se especifica o si no contiene suficientes colores, se generara automaticamente un conjunto de colores aleatorios.
 #' @param titulo Un string con el titulo del grafico. El valor predeterminado es `"Temperatura Abrigo"`.
 #'
@@ -44,7 +44,7 @@
     ggplot2::ggplot(ggplot2::aes(mes, temperatura_media)) +
     ggplot2::geom_line(ggplot2::aes(color = id), linewidth = 1.4) +
     ggplot2::scale_color_manual(values = colores) +
-    ggplot2::labs(x = "Mes", y = "Temperatura Media (°C)", title = titulo, color = "ID") +
+    ggplot2::labs(x = "Mes", y = "Temperatura Media (\u00b0C)", title = titulo, color = "ID") +
     ggplot2::theme_minimal(base_size = 14)
 
   return(grafico)
