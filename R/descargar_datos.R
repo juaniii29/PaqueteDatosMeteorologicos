@@ -10,7 +10,7 @@
 #' @return
 #' La informacion que contiene el dataset que fue descargado
 #'
-#' @example
+#' @examples
 #' data <- descargar_datos("NH0046")
 #'
 #' @export

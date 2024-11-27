@@ -19,3 +19,7 @@ estaciones que se solicite para luego realizar la descarga y lectura del dataset
 \details{
 Estos son detalles extra de la funcion
 }
+\examples{
+data <- descargar_datos("NH0046")
+
+}

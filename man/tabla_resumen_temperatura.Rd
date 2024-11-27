@@ -7,7 +7,9 @@
 tabla_resumen_temperatura(nombre_dataset = NULL, data = NULL)
 }
 \arguments{
-\item{nombre_archivo}{Un string con el nombre del archivo (sin extensión) que contiene el dataset de datos meteorológicos. Este archivo debe estar ubicado en la carpeta "data" y tener la extensión ".csv.rda".}
+\item{nombre_dataset}{Un string con el nombre del archivo (sin extensión) que contiene el dataset de datos meteorológicos. Este archivo debe estar ubicado en la carpeta "data" y tener la extensión ".csv.rda".}
+
+\item{data}{El conjunto de datos que se va a procesar}
 }
 \value{
 Un data frame con cuatro columnas:
