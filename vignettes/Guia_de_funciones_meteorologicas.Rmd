@@ -14,36 +14,77 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r}
+devtools::load_all()
+```
+
+
 ```{r setup}
 library(PaqueteDatosMeteorologicos)
 ```
 
-Esta viñeta nos permite mostrar como usar la funcion 'convertir_cf()' 
+## Introduccion a PaqueteDatosMeteorologicos
+
+El paquete `PaqueteDatosMeteorologicos` está diseñado para facilitar la clasificación, transformación y visualización de datos climáticos, centrándose en parámetros como la temperatura. Ofrece herramientas para convertir entre escalas de temperatura, analizar datos de distintas estaciones y generar resúmenes claros y útiles para el análisis meteorológico. Este paquete proporciona un enfoque práctico para trabajar con datos meteorológicos, integrando métodos esenciales para una interpretación más eficiente.
+
+## Comenzando con el paquete
+
+A continuación, se presenta una demostración rápida de algunas de las funcionalidades principales del paquete PaqueteDatosMeteorológicos. Exploraremos cómo:
+
+- Clasificar la temperatura en categorías específicas usando la función `clasificar_temperatura()`.
+- Convertir temperaturas entre las escalas Celsius y Fahrenheit utilizando funciones dedicadas.
+- Generar gráficos de temperaturas registradas en distintas estaciones meteorológicas.
+- Crear resúmenes detallados de datos de una estación específica.
+
+Cada ejemplo está diseñado para brindarte una comprensión práctica de cómo utilizar las funciones de manera efectiva en el análisis de datos meteorológicos. ¡Comencemos!
+
+### Clasificar Temperatura
+
+La función `clasificar_temperatura()` permite categorizar las temperaturas según rangos predefinidos. A continuación, un ejemplo rápido:
 
 ```{r}
-convertir_cf(30)
+temperatura <- 22  # Temperatura en grados Celsius
 
+# Clasificar temperatura
+clasificar_temperatura(temperatura)
 ```
 
-Esta viñeta nos permite mostrar como usar la funcion 'convertir_fc()' 
+### Convertir de Celsius a Fahrenheit
+
+La función `convertir_cf` convierte temperaturas de grados Celsius a Fahrenheit. Aquí tienes un ejemplo:
 
 ```{r}
-convertir_fc(33)
+celsius <- 25  # Temperatura en grados Celsius
 
+# Convertir a Fahrenheit
+convertir_cf(celsius)
 ```
 
-Esta viñeta nos permite mostrar como usar la funcion 'clasificar_temperatura()' 
+### Convertir de Fahrenheit a Celsius
+
+La función `convertir_fc()` convierte temperaturas de grados Fahrenheit a Celsius. Ejemplo rápido:
 
 ```{r}
-clasificar_temperatura(21)
+fahrenheit <- 77  # Temperatura en grados Fahrenheit
 
+# Convertir a Celsius
+convertir_fc(fahrenheit)
 ```
 
+### Resumen de una Estacion Meteorologica
 
-Esta viñeta nos permite mostrar como usar la funcion 'grafico_temperatura()' 
+La función `tabla_resumen_temperatura()` genera un resumen estadístico de los datos registrados en una estación específica. Este resumen incluye el promedio, la desviación estándar, y los valores mínimos y máximos de la temperatura. Ejemplo:
+
+```{r}
+tabla_resumen_temperatura('NH0910')
+```
+
+### Grafico de Temperaturas por Estacion
+
+La función `grafico_temperatura()` permite visualizar las temperaturas registradas en distintas estaciones meteorológicas. Un ejemplo básico:
 
 ```{r}
 grafico_temperatura(NH0046)
-
 ```
+
 
