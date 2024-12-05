@@ -23,7 +23,6 @@ LazyData: true
 Config/testthat/edition: 3
 Imports: 
     cli,
-    devtools,
     dplyr,
     ggplot2,
     lubridate
